@@ -1,0 +1,8 @@
+<div class="main__container">
+  <div class="weather_card_item" *ngFor="let place of places$">
+    <app-weather-card [city]=place></app-weather-card>
+  </div>
+  <div class="weather_card_item">
+    <app-add-card></app-add-card>
+  </div>
+</div>

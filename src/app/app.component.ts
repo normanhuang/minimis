@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  showMenu: Boolean;
+  darkModeActive: Boolean;
+  date: number;
+
+  constructor() {
+    this.date = Date.now();
+  }
+  modeToggleSwitch() {
+    this.darkModeActive = !this.darkModeActive;
+    console.log('hello');
+   }
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+   }
 }
