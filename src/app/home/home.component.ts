@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherService } from '../weather.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   places$: string[];
-  constructor() {
+  constructor(private weatherService: WeatherService) {
+    this.weatherService.getCurrentTemp('Paris');
    }
 
   ngOnInit() {
-    this.places$ = ['paris', 'finland'];
   }
 
 }
